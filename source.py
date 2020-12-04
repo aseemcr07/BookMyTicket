@@ -2,11 +2,10 @@ from tkinter import *
 from tkinter import messagebox
 import tkinter as tk
 from tkinter import ttk
-from PIL import Image
 
 root = Tk()
 root.title("BookMyTicket")
-root.geometry('600x400')
+root.geometry('640x375')
 
 # Tab Styling
 style = ttk.Style(root)
@@ -221,6 +220,13 @@ buttonproceed.grid(row=4, column=1, columnspan=2)
 buttonexit = Button(tab2, text="Exit", bg='#e31a01',
                     fg='#fff', width=10, command=root.destroy)
 buttonexit.grid(row=4, column=3)
+         
+# Seatings
+#create image
+seating_img = tk.PhotoImage(file="select-a-seat.png")
+#adding image to label
+seat = Label(tab3, image=seating_img) 
+seat.place(x=0, y=0)
 
 # About
 about_label = Label(
